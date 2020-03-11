@@ -7,8 +7,13 @@ int main()
 {
 	Triangle* ABC = new Triangle(3, 4, 5);
 	
-	ABC->Print();
-	delete ABC;
+	Triangle* BCA = new Triangle(*ABC);
 
+	BCA->Print();
+	ABC->Print();
+
+
+	delete ABC;
+	delete BCA;
 }
 
